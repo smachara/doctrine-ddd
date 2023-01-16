@@ -1,5 +1,9 @@
-controllers:
-    resource:
-        path: ../src/Controller/
-        namespace: App\Controller
-    type: attribute
+api_add_member:
+    path:       /member
+    controller:  App\Application\Controller\MemberController::add
+    methods:    POST
+
+api_find_member:
+    path: /member/{id}
+    methods: GET
+    controller: App\Application\Controller\MemberController::find
